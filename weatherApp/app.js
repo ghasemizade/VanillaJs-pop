@@ -57,6 +57,6 @@ searchBtn.addEventListener('click', function () {
         document.querySelector('.weather').style.display = 'block'
         
     }else{
-
+        alert('not found this city...!')
     }
 })

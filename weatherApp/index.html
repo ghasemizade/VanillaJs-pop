@@ -12,10 +12,20 @@
     <div class="container">
         <div class="search-box">
             <div class="header-search">
-                <input type="text" class="search-section">
-                <button class="search-btn"><img src="./image-icon/search-icon.png" alt=""></button>
+                <input type="text" id="user-input" class="search-section">
+                <button id="btn" class="search-btn"><img src="./image-icon/search-icon.png" alt=""></button>
             </div>
-            <p class="text">Loading...</p>
+            <div id="content">Loading...</div>
+            <div class="weather loading">
+                <h2 class="city">Weather in Denver</h2>
+                <h1 id="temp">51°C</h1>
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/04n.png" alt="cloud">
+                    <div id="description">Cloudy</div>
+                </div>
+                <div id="humidity">Humidity: 60%</div>
+                <div id="wind">Wind speed: 6.2 km/h</div>
+            </div>
         </div>
     </div>
     <script src="./app.js"></script>

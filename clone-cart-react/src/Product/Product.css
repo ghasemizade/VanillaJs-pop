@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+
+}
+
+.card{
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    width: 400px;
+    height: auto;
+    margin-top: 2rem;
+    text-align: center;
+    font-family: sans-serif;
+    /* margin: 2rem; */
+}
+.card img{
+    width: 20rem;
+}
+.price{
+    color: #666;
+    font-weight: 500;
+    font-size: 24px;
+    margin: 1.5rem 0;
+}
+.card .about{
+    font-size: 18px;
+    padding: .8rem;
+}
+button{
+    margin-top: 1rem;
+    border: none;
+    background-color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 1rem;
+    transition: .2s;
+    /* border-radius: 2rem; */
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+button:hover{
+    /* background-color: rgba(55, 196, 55, 0.692); */
+    color: #2BCE97;
+}
+@media screen and (max-width: 1400px) {
+    .App{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.container h2{
+    text-align: center;
+    margin-top: 10rem;
+}
+.off-btn{
+    border-top: none;
+}
+.off-btn:hover{
+    color: tomato;
+}

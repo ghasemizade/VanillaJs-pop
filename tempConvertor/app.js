@@ -31,7 +31,6 @@ resetBtn.addEventListener('click', function () {
 
 let getInput = $.getElementById('input-degree')
 let convertorBtn = $.getElementById('btn-convert')
-console.log(getInput.placeholder)
 
 convertorBtn.addEventListener('click', function () {
     let getValue =  getInput.value

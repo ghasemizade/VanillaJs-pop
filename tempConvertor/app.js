@@ -1,16 +1,13 @@
 let $ = document
 let changeBtn = $.getElementById('btn-change')
+let flag = true
 
 changeBtn.addEventListener('click', function () {
-    let flag = false
-     if (flag) {
+    if (!flag) {
+         $.getElementById('title').innerHTML= 'Convertor ' + '°C ' + 'to' + ' °F'
+         flag = true
+    }else{
         $.getElementById('title').innerHTML = 'Convertor ' + '°F ' + 'to' + ' °C'
-        flag = true
-        console.log(flag)
-     }else{
-        
-        $.getElementById('title').innerHTML
-        flag = true
-        console.log(flag)
-     }
+        flag = false
+    }
 })

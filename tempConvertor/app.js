@@ -11,3 +11,11 @@ changeBtn.addEventListener('click', function () {
         flag = false
     }
 })
+
+let getDecs = $.getElementById('desc')
+let resetBtn = $.getElementById('btn-reset')
+console.log(resetBtn)
+
+resetBtn.addEventListener('click', function () {
+    getDecs.style.display = 'none'
+})

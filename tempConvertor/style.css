@@ -49,3 +49,9 @@ body{
     background-color: rgba(78, 172, 78, 0.842);
     color: #fff;
 }
+#desc{
+    color: rgba(207, 252, 46, 0.842);
+    font-size: 2.5rem;
+    font-weight: 600;
+    display: block;
+}

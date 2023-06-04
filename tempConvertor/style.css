@@ -26,16 +26,18 @@ body{
 }
 #input-degree{
     margin-bottom: 4rem;
-    padding: .5rem;
+    padding: 1rem;
     outline: none;
     border: none;
     border-radius: 2rem;
     transition: .4s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 #input-degree:hover{
-    padding: .5rem 2rem;
+    padding: 1rem 2rem;
 }
 .btns button{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     margin: 2rem;
     width: 150px;
     border: none;
@@ -48,6 +50,12 @@ body{
 .btns button:hover{
     background-color: rgba(78, 172, 78, 0.842);
     color: #fff;
+}
+#btn-reset:hover{
+    background-color: tomato;
+}
+#btn-change:hover{
+    background-color: goldenrod;
 }
 #desc{
     color: #555;

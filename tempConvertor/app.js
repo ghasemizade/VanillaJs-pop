@@ -3,11 +3,16 @@ let changeBtn = $.getElementById('btn-change')
 let flag = true
 
 changeBtn.addEventListener('click', function () {
+    let getValue = getInput.value
     if (!flag) {
-         $.getElementById('title').innerHTML= 'Convertor ' + '°C ' + 'to' + ' °F'
-         flag = true
+        $.getElementById('title').innerHTML= 'Convertor ' + '°C ' + 'to' + ' °F'
+        let showF = (1.8 * getValue) + 32
+        getDecs.innerHTML = getValue +'°C '+ 'to ' + showF +'°F'
+        flag = true
     }else{
         $.getElementById('title').innerHTML = 'Convertor ' + '°F ' + 'to' + ' °C'
+        let showC = Number((getValue - 32) / 1.8)
+        getDecs.innerHTML = getValue +'°F '+ 'to ' + showC +'°C'
         flag = false
     }
 })
@@ -19,6 +24,7 @@ let resetBtn = $.getElementById('btn-reset')
 
 resetBtn.addEventListener('click', function () {
     getDecs.style.display = 'none'
+    getInput.value = ''
 })
 
 let getInput = $.getElementById('input-degree')
@@ -30,9 +36,13 @@ convertorBtn.addEventListener('click', function () {
     console.log(getValue)
     if (flag) {
         let showF = (1.8 * getValue) + 32
+        getDecs.innerHTML = getValue +'°C '+ 'to ' + showF +'°F'
+        getDecs.style.display = 'block'
         console.log(showF)
     }else{
         let showC = (getValue - 32) / 1.8
+        getDecs.innerHTML = getValue +'°F '+ 'to ' + showC +'°C'
+        getDecs.style.display = 'block'
         console.log(showC)
     }
 })

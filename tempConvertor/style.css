@@ -53,5 +53,5 @@ body{
     color: rgba(207, 252, 46, 0.842);
     font-size: 2.5rem;
     font-weight: 600;
-    display: block;
+    display: none;
 }

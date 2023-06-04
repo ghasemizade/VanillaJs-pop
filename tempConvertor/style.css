@@ -46,6 +46,7 @@ body{
     color: #666;
     font-size: 1.2rem;
     transition: .2s;
+    cursor: pointer;
 }
 .btns button:hover{
     background-color: rgba(78, 172, 78, 0.842);

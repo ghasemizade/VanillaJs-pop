@@ -34,16 +34,14 @@ let convertorBtn = $.getElementById('btn-convert')
 
 convertorBtn.addEventListener('click', function () {
     let getValue =  getInput.value
-    console.log(getValue)
     if (flag) {
         let showF = (1.8 * getValue) + 32
-        getDecs.innerHTML = getValue +'°C '+ 'to ' + showF +'°F'
+        console.log(isNaN(showF))
+        isNaN(showF) ? getDecs.innerHTML = 'Wrong Value' :  getDecs.innerHTML = getValue +'°C '+ 'to ' + showF +'°F'
         getDecs.style.display = 'block'
-        console.log(showF)
     }else{
         let showC = (getValue - 32) / 1.8
-        getDecs.innerHTML = getValue +'°F '+ 'to ' + showC +'°C'
+        isNaN(showC) ? getDecs.innerHTML = 'Wrong Value' : getDecs.innerHTML = getValue +'°F '+ 'to ' + showC +'°C'
         getDecs.style.display = 'block'
-        console.log(showC)
     }
 })

@@ -8,11 +8,13 @@ changeBtn.addEventListener('click', function () {
         $.getElementById('title').innerHTML= 'Convertor ' + '°C ' + 'to' + ' °F'
         let showF = (1.8 * getValue) + 32
         getDecs.innerHTML = getValue +'°C '+ 'to ' + showF +'°F'
+        getInput.placeholder = '°C'
         flag = true
     }else{
         $.getElementById('title').innerHTML = 'Convertor ' + '°F ' + 'to' + ' °C'
         let showC = Number((getValue - 32) / 1.8)
         getDecs.innerHTML = getValue +'°F '+ 'to ' + showC +'°C'
+        getInput.placeholder = '°F'
         flag = false
     }
 })
@@ -29,7 +31,7 @@ resetBtn.addEventListener('click', function () {
 
 let getInput = $.getElementById('input-degree')
 let convertorBtn = $.getElementById('btn-convert')
-// console.log(convertorBtn)
+console.log(getInput.placeholder)
 
 convertorBtn.addEventListener('click', function () {
     let getValue =  getInput.value

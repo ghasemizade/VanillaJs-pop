@@ -40,7 +40,8 @@ body {
 
 .info-box {
 	text-align: center;
-	width: 16%;
+	margin: 3rem;
+	width: 300px;
 	transition: .2s;
 }
 
@@ -71,12 +72,14 @@ body {
 	padding: 5px;
 }
 
-#heading, #ascii, #infos {
-	display: block;
+#heading, #asci, #informations {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #starter {
-	display: none;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 30px;

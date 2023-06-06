@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/style.css">
+    <title>keyLoger</title>
+  </head>
+  <body> 
+	<section id="starter">
+		<div id="starter-text">
+			Press any key to get the JavaScript event keycode
+		</div>
+	</section>
+	<div id="heading">
+		<h1>JavaScript Key Code</h1>
+	</div>
+	<div id="asci">
+		<h1 id="keyCode">128</h1>
+	</div>
+	<div id="informations">
+		<div class="info-box">
+			<h3>event.key</h3>
+				<h2 id="key">Alt</h2>
+				<p>The value of the key pressed. Accounts for modifiers keys that return CAPS and alternate chars.</p>
+		</div>
+		<div class="info-box">
+			<h3>event.location</h3>
+				<h2 id="location">Alt</h2>
+				<p>Some keys exist more than once on your keyboard. This provides the location of the key pressed. Try it with both shifts.</p>
+		</div>
+		<div class="info-box">
+			<h3>event.code</h3>
+				<h2 id="which">Alt</h2>
+				<p>The physical key on the keyboard. Doesn't care if you are holding a modifier like Shift.</p>
+		</div>
+		<div class="info-box">
+			<h3>event.which</h3>
+				<h2 id="code">Alt</h2>
+				<p>event.which and event.keyCode are deprecated in modern browsers. Use .key or .code instead.</p>
+		</div>
+	</div>
+    <script src="./app.js"></script>
+  </body>
+</html>

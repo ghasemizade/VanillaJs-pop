@@ -1,5 +1,5 @@
 let getElemInput = document.getElementById('input-sec')
-let getElemItem = document.querySelector('.tasks')
+let getElemItem = document.querySelector('ul')
 let getElemTask = document.querySelectorAll('.item')
 let getImgTag = document.getElementById('img')
 
@@ -7,24 +7,24 @@ let getImgTag = document.getElementById('img')
 
 getElemInput.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-        inputVal = getElemInput.value
-        newLi = document.createElement('li')
+        let inputVal = getElemInput.value
+        let newLi = document.createElement('li')
             //add img & set img src
         newImg = document.createElement('img')
         newImg.setAttribute('src', './image/recycle-bin.png')
         newImg.setAttribute('id', 'img')
             // add li tag to ul
         getElemItem.appendChild(newLi)
+        getElemItem.lastChild.setAttribute('class', 'item')
             // add text value to last li
         getElemItem.lastChild.textContent = inputVal
             //add img tag to last child ul element 
         getElemItem.lastElementChild.appendChild(newImg)
-
+        console.log(getElemItem.children.for)
     }
 })
 
 
-getImgTag.addEventListener('click', function (event) {
-    console.log(event.key)
+getImgTag.addEventListener('click', function () {
+    console.log('test')
 })
-

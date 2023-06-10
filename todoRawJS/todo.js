@@ -1,7 +1,7 @@
 let getElemInput = document.getElementById('input-sec')
 let getElemItem = document.querySelector('.tasks')
-let getElemTask = document.querySelector('.item')
-let getImgTag = document.getElementsByTagName('img')
+let getElemTask = document.querySelectorAll('.item')
+let getImgTag = document.getElementById('img')
 
 // console.log(getElemItem.lastElementChild)
 
@@ -23,4 +23,8 @@ getElemInput.addEventListener('keydown', function (event) {
     }
 })
 
-getImgTag.addEventListener('click')
+
+getImgTag.addEventListener('click', function (event) {
+    console.log(event.key)
+})
+

@@ -66,3 +66,25 @@ body{
     color: #679289;
     font-size: 18px;
 }
+.trash{
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    position: absolute;
+    bottom: 8rem;
+    right: 10rem;
+}
+.counter{
+    position: absolute;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    padding-bottom: 1.5rem;
+    font-size: 24px;
+    font-weight: 700;
+    color: #EE2E31;
+}
+.trash img{
+    width: 70px;
+}

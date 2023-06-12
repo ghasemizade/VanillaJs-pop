@@ -4,8 +4,8 @@ let getElemUl = $.querySelector('.tasks')
 let getElemLi = $.querySelectorAll('.item')
 let getIconClass = $.querySelector('.delete')
 let getBtn = $.querySelector('.btn-add')
+let getCounter = $.getElementById('counter')
 
-// console.log(getBtn)
 
 function addNewTask(inputVal) {
 // add li element
@@ -20,6 +20,7 @@ function addNewTask(inputVal) {
 
     newicon.addEventListener('click', function (event) {
         event.target.parentElement.remove()
+        getCounter.innerHTML++
     })
 
     newLi.append(newTaskText, newicon)

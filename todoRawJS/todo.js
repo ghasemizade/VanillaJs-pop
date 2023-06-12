@@ -16,16 +16,16 @@ function addNewTask(inputVal) {
     newLi.append(newTaskText, newicon)
     getElemUl.append(newLi)
     console.log(newLi)
-}
 
+}
+let inputVal = getElemInput.value.trim()
+        
 getElemInput.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-        let inputVal = getElemInput.value.trim()
-        addNewTask(inputVal)
+        if (inputVal) {
+            addNewTask(inputVal)    
+        }
+// delete input value 
+        getElemInput.value = ''
     }
 })
-
-
-// getImgTag.addEventListener('click', function () {
-//     console.log('test')
-// })

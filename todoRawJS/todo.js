@@ -3,6 +3,9 @@ let getElemInput = $.querySelector('input')
 let getElemUl = $.querySelector('.tasks')
 let getElemLi = $.querySelectorAll('.item')
 let getIconClass = $.querySelector('.delete')
+let getBtn = $.querySelector('.btn-add')
+
+// console.log(getBtn)
 
 function addNewTask(inputVal) {
 // add li element
@@ -38,9 +41,10 @@ getElemInput.addEventListener('keydown', function (event) {
     }
 })
 
-
-// getElemLi.forEach(function () {
-//     getIconClass.addEventListener('click', function () {
-//         getElemLi.remove()
-//     })
-// })
+getBtn.addEventListener('click', function () {
+    let inputVal = getElemInput.value.trim()
+    if (inputVal) {
+        addNewTask(inputVal)
+    }
+    getElemInput.value = ''
+})

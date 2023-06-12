@@ -25,12 +25,8 @@ function addNewTask(inputVal) {
 
     newLi.append(newTaskText, newicon)
     getElemUl.append(newLi)
-    // console.log(newLi)
-
 }
-
-
-
+// event for input
 getElemInput.addEventListener('keydown', function (event) {
     let inputVal = getElemInput.value.trim()
     if (event.key === 'Enter') {
@@ -41,7 +37,7 @@ getElemInput.addEventListener('keydown', function (event) {
         getElemInput.value = ''
     }
 })
-
+// event for button
 getBtn.addEventListener('click', function () {
     let inputVal = getElemInput.value.trim()
     if (inputVal) {

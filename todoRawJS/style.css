@@ -21,7 +21,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .tasks{
     list-style: none;
@@ -37,7 +36,7 @@ body{
     font-size: 22px;
     border-radius: .3rem;
 }
-.tasks li img{
+.tasks img{
     width: 40px;
     cursor: no-drop;
 }

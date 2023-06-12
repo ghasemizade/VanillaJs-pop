@@ -1,30 +1,31 @@
-let getElemInput = document.getElementById('input-sec')
-let getElemItem = document.querySelector('ul')
-let getElemTask = document.querySelectorAll('.item')
-let getImgTag = document.getElementById('img')
+let $ = document;
+let getElemInput = $.querySelector('input')
+let getElemUl = $.querySelector('.tasks')
 
-// console.log(getElemItem.lastElementChild)
+function addNewTask(inputVal) {
+// add li element
+    let newLi = document.createElement('li')
+    newLi.className = 'item'
+// add span text to li 
+    let newTaskText = $.createElement('span')
+    newTaskText.innerHTML = inputVal
+// add trash icon to li
+    let newicon = $.createElement('i')
+    newicon.className = 'fa fa-trash-o delete'
+
+    newLi.append(newTaskText, newicon)
+    getElemUl.append(newLi)
+    console.log(newLi)
+}
 
 getElemInput.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-        let inputVal = getElemInput.value
-        let newLi = document.createElement('li')
-            //add img & set img src
-        newImg = document.createElement('img')
-        newImg.setAttribute('src', './image/recycle-bin.png')
-        newImg.setAttribute('id', 'img')
-            // add li tag to ul
-        getElemItem.appendChild(newLi)
-        getElemItem.lastChild.setAttribute('class', 'item')
-            // add text value to last li
-        getElemItem.lastChild.textContent = inputVal
-            //add img tag to last child ul element 
-        getElemItem.lastElementChild.appendChild(newImg)
-        console.log(getElemItem.children.for)
+        let inputVal = getElemInput.value.trim()
+        addNewTask(inputVal)
     }
 })
 
 
-getImgTag.addEventListener('click', function () {
-    console.log('test')
-})
+// getImgTag.addEventListener('click', function () {
+//     console.log('test')
+// })

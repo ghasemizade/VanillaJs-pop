@@ -87,3 +87,24 @@ body{
 .trash img{
     width: 70px;
 }
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    margin: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: .3rem;
+    font-family: Dana;
+    font-weight: 600;
+    background-color: #2aa9eed8;
+    color: #fff;
+}
+button:hover{
+    background-color: #2AABEE;
+}
+i{
+    cursor: pointer;
+}

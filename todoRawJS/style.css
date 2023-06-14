@@ -27,7 +27,7 @@ body{
 }
 .tasks li{
     width: 300px;
-    background-color: #071E22;
+    background-color: #2aa9eed8;
     padding: 1rem;
     color: #fff;
     display: flex;
@@ -35,6 +35,11 @@ body{
     align-items: center;
     font-size: 22px;
     border-radius: .3rem;
+    margin-bottom: .3rem;
+    transition: .15s;
+}
+.tasks li:hover{
+    transform: scale(1.05);
 }
 .tasks img{
     width: 40px;
@@ -48,7 +53,7 @@ body{
 }
 .task-sec h2{
     margin-bottom: 1rem;
-    color: #071E22;
+    color: #ccc;
 }
 .task-sec input{
     width: 300px;

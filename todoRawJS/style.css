@@ -108,3 +108,6 @@ button:hover{
 i{
     cursor: pointer;
 }
+img{
+    cursor: not-allowed;
+}

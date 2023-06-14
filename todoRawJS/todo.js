@@ -22,7 +22,7 @@ function addNewTask(inputVal) {
         event.target.parentElement.remove()
         getCounter.innerHTML++
     })
-
+    
     newLi.append(newTaskText, newicon)
     getElemUl.append(newLi)
 }
@@ -31,7 +31,7 @@ getElemInput.addEventListener('keydown', function (event) {
     let inputVal = getElemInput.value.trim()
     if (event.key === 'Enter') {
         if (inputVal) {
-            addNewTask(inputVal)    
+            addNewTask(inputVal)
         }
 // delete input value 
         getElemInput.value = ''

@@ -4,7 +4,13 @@ let getContextMenu = $.getElementById('context-menu')
 
 $.addEventListener('contextmenu', function (event) {
     event.preventDefault()
-    getContextMenu.style.display = 'block'
+    if (getContextMenu.style.display === 'none') {
+        
+        getContextMenu.style.left = event.pageX + 'px'
+        getContextMenu.style.top = event.pageY + 'px'
+
+        getContextMenu.style.display = 'block'
+    }
 })
 
 $.addEventListener('click', function () {

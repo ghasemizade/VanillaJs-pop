@@ -43,3 +43,7 @@ body{
 .item-group i{
     margin-right: .5rem;
 }
+.title{
+    text-align: center;
+    color: tomato;
+}

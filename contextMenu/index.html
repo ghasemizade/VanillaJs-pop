@@ -3,11 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style/style.css">
     <title>context Menu</title>
 </head>
 <body>
-    
+    <div class="context-menu">
+        <ul class="item-group">
+            <li id="share">
+                <i class="fa-solid fa-share"></i>
+                <span>Share</span>
+            </li>
+            <li id="rename">
+                <i class="fa-solid fa-pen"></i>
+                <span>Rename</span>
+            </li>
+            <li id="copy-link">
+                <i class="fa-solid fa-link"></i>
+                <span>Copy Link Address</span>
+            </li>
+            <li id="copy">
+                <i class="fa-solid fa-copy"></i>
+                <span>Copy to</span>
+            </li>
+            <li id="move">
+                <i class="fa-solid fa-scissors"></i>
+                <span>Move to</span>
+            </li>
+            <li id="download">
+                <i class="fa-solid fa-download"></i>
+                <span>Download</span>
+            </li>
+            <li id="delete">
+                <i class="fa-solid fa-trash"></i>
+                <span>Delete</span>
+            </li>
+        </ul>
+    </div>
     <script src="./app.js"></script>
 </body>
 </html>

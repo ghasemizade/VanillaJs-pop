@@ -5,7 +5,7 @@ let getElemLi = $.querySelectorAll('.item')
 let getIconClass = $.querySelector('.delete')
 let getBtn = $.querySelector('.btn-add')
 let getCounter = $.getElementById('counter')
-
+let getLoader = $.querySelector('.loader')
 
 function addNewTask(inputVal) {
 // add li element
@@ -44,4 +44,9 @@ getBtn.addEventListener('click', function () {
         addNewTask(inputVal)
     }
     getElemInput.value = ''
+})
+
+window.addEventListener('load', function () {
+
+    getLoader.className += 'hidden'
 })

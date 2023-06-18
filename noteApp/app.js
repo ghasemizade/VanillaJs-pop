@@ -17,6 +17,7 @@ getInput.addEventListener('keyup', function (event) {
         createDivElem.appendChild(createSpanElem)
         createSpanElem.innerHTML = getInput.value
         getInput.value = ''
+        getInput.style.backgroundColor = ''
     }
 })
 
@@ -67,7 +68,7 @@ getAddBtn.addEventListener('click', function () {
     let createSpanElem = document.createElement('span')
     createDivElem.className = 'note'
     createDivElem.style.backgroundColor = getInput.style.backgroundColor 
-    // console.log(getInput.style.backgroundColor)
+    getInput.style.backgroundColor = ''
     createSpanElem.className = 'title'
     getNotes.appendChild(createDivElem)
     createDivElem.appendChild(createSpanElem)

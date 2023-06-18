@@ -37,21 +37,23 @@ body{
     border-radius: .3rem;
     outline: none;
     margin-bottom: 1rem;
+
 }
 .container input:focus{
     border: none;
     box-shadow: 0px 0px 5px 4px rgba(50, 171, 228, 0.733);
 }
-.palete{
+#pallet{
     display: flex;
 }
-.palete > div{
+#pallet > div{
     width: 20px;
     height: 20px;
     border: #aaa .5px solid;
     border-radius: 5rem;
     margin-right: .7rem;
     cursor: pointer;
+    color: transparent;
 }
 .btn{
     display: flex;
@@ -83,36 +85,36 @@ body{
     background-color: tomato;
     color: #fff;
 }
-.palete :nth-last-child(11){
+#pallet :nth-last-child(11){
     background-color: var(--white);
 }
-.palete :nth-last-child(10){
+#pallet :nth-last-child(10){
     background-color: var(--golden);
 }
-.palete :nth-last-child(9){
+#pallet :nth-last-child(9){
     background-color: var(--yellow);
 }
-.palete :nth-last-child(8){
+#pallet :nth-last-child(8){
     background-color: var(--limon);
 }
-.palete :nth-last-child(7){
+#pallet :nth-last-child(7){
     background-color: var(--green);
 }
-.palete :nth-last-child(6){
+#pallet :nth-last-child(6){
     background-color: var(--darkcyan);
 }
-.palete :nth-last-child(5){
+#pallet :nth-last-child(5){
     background-color: var(--cyan);
 }
-.palete :nth-last-child(4){
+#pallet :nth-last-child(4){
     background-color: var(--blue);
 }
-.palete :nth-last-child(3){
+#pallet :nth-last-child(3){
     background-color: var(--darkpurple);
 }
-.palete :nth-last-child(2){
+#pallet :nth-last-child(2){
     background-color: var(--purple);
 }
-.palete :nth-last-child(1){
+#pallet :nth-last-child(1){
     background-color: var(--pink);
 }

@@ -11,8 +11,6 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* add blur */
-    
 }
 #start{
     display: block;

@@ -62,7 +62,15 @@ getItemColor.forEach(function(index){
 })
 
 getAddBtn.addEventListener('click', function () {
-    
+    let createDivElem = document.createElement('div')
+    let createSpanElem = document.createElement('span')
+    createDivElem.className = 'note'
+    createDivElem.style.backgroundColor = getInput.style.backgroundColor 
+    // console.log(getInput.style.backgroundColor)
+    createSpanElem.className = 'title'
+    getNotes.appendChild(createDivElem)
+    createDivElem.appendChild(createSpanElem)
+    createSpanElem.innerHTML = getInput.value
 })
 
 getDelBtn.addEventListener('click', function () {

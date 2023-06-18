@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    color: #555;
+    letter-spacing: 1rem;
+}
+.container input{
+    padding: .5rem;
+    width: 500px;
+    border: #aaa .5px solid;
+    border-radius: .3rem;
+    outline: none;
+    margin-bottom: 1rem;
+}
+.container input:focus{
+    border: none;
+    box-shadow: 0px 0px 5px 4px rgba(50, 171, 228, 0.733);
+}
+.palete{
+    display: flex;
+}
+.palete > div{
+    width: 20px;
+    height: 20px;
+    border: #aaa .5px solid;
+    border-radius: 5rem;
+    margin-right: .7rem;
+    cursor: pointer;
+}
+.btn{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.btn > button{
+    padding: .6rem;
+    display: flex;
+    margin-left: .2rem;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: .1rem;
+    transition: .1s;
+}
+.btn > button:first-child{
+    border: rgba(50, 171, 228, 0.733) .5px solid;
+    color: rgba(50, 171, 228, 0.733);
+}
+.btn > button:first-child:hover{
+    background-color: rgb(50, 172, 228);
+    color: #fff;
+}
+.btn > button:last-child{
+    border: tomato .5px solid;
+    color: tomato;
+}
+.btn > button:last-child:hover{
+    background-color: tomato;
+    color: #fff;
+}

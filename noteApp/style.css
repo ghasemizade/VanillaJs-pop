@@ -42,6 +42,11 @@ body{
 .container input:focus{
     border: none;
     box-shadow: 0px 0px 5px 4px rgba(50, 171, 228, 0.733);
+    font-size: 20px;
+}
+.container input::placeholder{
+    font-size: 20px;
+    letter-spacing: 1rem;
 }
 #pallet{
     display: flex;

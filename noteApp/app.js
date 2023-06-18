@@ -16,6 +16,7 @@ getInput.addEventListener('keyup', function (event) {
         getNotes.appendChild(createDivElem)
         createDivElem.appendChild(createSpanElem)
         createSpanElem.innerHTML = getInput.value
+        getInput.value = ''
     }
 })
 

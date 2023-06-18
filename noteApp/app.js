@@ -1,11 +1,25 @@
 let getItemColor = document.querySelectorAll('.item')
 let getPalletColor = document.getElementById('pallet')
 let getInput = document.getElementById('input')
+let getAddBtn = document.getElementById('add')
+let getDelBtn = document.getElementById('del')
+let getNotes = document.getElementById('notes')
 
-
+getInput.addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+        console.log(getInput.value)
+        let createDivElem = document.createElement('div')
+        let createSpanElem = document.createElement('span')
+        createDivElem.className = 'note'
+        createSpanElem.className = 'title'
+        getNotes.appendChild(createDivElem)
+        createDivElem.appendChild(createSpanElem)
+        createSpanElem.innerHTML = getInput.value
+    }
+})
 
 getItemColor.forEach(function(index){
-    index.addEventListener('click', function (event) {
+    index.addEventListener('click', function () {
         switch (index.innerHTML) {
             case '1':
                 getInput.style.backgroundColor = 'var(--white)'
@@ -44,4 +58,12 @@ getItemColor.forEach(function(index){
                 break;
         }
     })
+})
+
+getAddBtn.addEventListener('click', function () {
+    
+})
+
+getDelBtn.addEventListener('click', function () {
+    
 })

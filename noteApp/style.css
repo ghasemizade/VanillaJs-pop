@@ -59,6 +59,7 @@ body{
     display: flex;
     justify-content: end;
     align-items: center;
+    margin-bottom: 5rem;
 }
 .btn > button{
     padding: .6rem;
@@ -117,4 +118,22 @@ body{
 }
 #pallet :nth-last-child(1){
     background-color: var(--pink);
+}
+#notes{
+    width: 80%;
+    text-align: center; 
+}
+.note {
+    background-color: #77FFFF;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 24px;
+    color: #555;
+    font-weight: 500;
+    border-radius: .3rem;
+    transition: .2s;
+    letter-spacing: .5rem;
+}
+.note:hover{
+    transform: scale(1.03);
 }

@@ -83,3 +83,36 @@ body{
     background-color: tomato;
     color: #fff;
 }
+.palete :nth-last-child(11){
+    background-color: var(--white);
+}
+.palete :nth-last-child(10){
+    background-color: var(--golden);
+}
+.palete :nth-last-child(9){
+    background-color: var(--yellow);
+}
+.palete :nth-last-child(8){
+    background-color: var(--limon);
+}
+.palete :nth-last-child(7){
+    background-color: var(--green);
+}
+.palete :nth-last-child(6){
+    background-color: var(--darkcyan);
+}
+.palete :nth-last-child(5){
+    background-color: var(--cyan);
+}
+.palete :nth-last-child(4){
+    background-color: var(--blue);
+}
+.palete :nth-last-child(3){
+    background-color: var(--darkpurple);
+}
+.palete :nth-last-child(2){
+    background-color: var(--purple);
+}
+.palete :nth-last-child(1){
+    background-color: var(--pink);
+}

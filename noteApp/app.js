@@ -72,6 +72,7 @@ getAddBtn.addEventListener('click', function () {
     getNotes.appendChild(createDivElem)
     createDivElem.appendChild(createSpanElem)
     createSpanElem.innerHTML = getInput.value
+    getInput.value = ''
 })
 
 getDelBtn.addEventListener('click', function () {

@@ -41,10 +41,16 @@ body{
     padding: 1rem;
     width: 300px;
     transition: .2s;
+    color: rgb(76, 155, 76);
+    font-size: 1.5rem;
 }
 #input-box input:focus{
     color: rgb(76, 155, 76);
     font-size: 1.5rem;
+}
+#input-box input::placeholder{
+    font-size: 1.5rem;
+    color: rgba(76, 155, 76, 0.473);
 }
 span{
     font-size: 1rem;

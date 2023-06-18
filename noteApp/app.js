@@ -74,5 +74,6 @@ getAddBtn.addEventListener('click', function () {
 })
 
 getDelBtn.addEventListener('click', function () {
-    
+    getInput.value = ''
+    getInput.style.backgroundColor = 'var(--white)' 
 })

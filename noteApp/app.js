@@ -7,10 +7,11 @@ let getNotes = document.getElementById('notes')
 
 getInput.addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
-        console.log(getInput.value)
         let createDivElem = document.createElement('div')
         let createSpanElem = document.createElement('span')
         createDivElem.className = 'note'
+        createDivElem.style.backgroundColor = getInput.style.backgroundColor 
+        console.log(getInput.style.backgroundColor)
         createSpanElem.className = 'title'
         getNotes.appendChild(createDivElem)
         createDivElem.appendChild(createSpanElem)

@@ -1,3 +1,16 @@
+:root{
+    --white: #FFF;
+    --golden: #FDD57F;
+    --yellow: #FEFA84;
+    --limon: #D3F784;
+    --green: #79F780;
+    --darkcyan: #7CFAD7;
+    --cyan: #77FFFF;
+    --blue: #7DD3FB;
+    --darkpurple: #7B84FE;
+    --purple: #D58AFC;
+    --pink: #F78CFF;
+}
 *{
     box-sizing: border-box;
     padding: 0;

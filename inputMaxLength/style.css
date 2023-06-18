@@ -40,6 +40,11 @@ body{
     outline: none;
     padding: 1rem;
     width: 300px;
+    transition: .2s;
+}
+#input-box input:focus{
+    color: rgb(76, 155, 76);
+    font-size: 1.5rem;
 }
 span{
     font-size: 1rem;

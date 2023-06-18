@@ -31,9 +31,9 @@ body{
     letter-spacing: 1rem;
 }
 .container input{
-    padding: .5rem;
+    padding: .7rem;
     width: 500px;
-    border: #aaa .5px solid;
+    border: none;
     border-radius: .3rem;
     outline: none;
     margin-bottom: 1rem;

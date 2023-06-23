@@ -5,11 +5,11 @@ let getpreviousBtn = document.getElementById('previous')
 let flag = true
 
 let musicArraySrc = [
-    'Light Music 01.mp3',
-    'Light Music 02.mp3',
-    'Light Music 03.mp3',
-    'Light Music 04.mp3',
-    'Light Music 05.mp3',
+    './media/LightMusic01.mp3',
+    './media/LightMusic02.mp3',
+    './media/LightMusic03.mp3',
+    './media/LightMusic04.mp3',
+    './media/LightMusic05.mp3',
 ]
 
 let audioIndex = 0
@@ -31,5 +31,11 @@ getPlayPauseBtn.addEventListener('click', function () {
 })
 
 getNextBtn.addEventListener('click', function () {
-    audioIndex++;
+    audioIndex += 1;
+    if (audioIndex > musicArraySrc.length - 1) {
+        audioIndex = 0;
+    }
+    getAudio.setAttribute('src', musicArraySrc[audioIndex])
+    getAudio.play()
+    console.log(musicArraySrc[audioIndex])
 })

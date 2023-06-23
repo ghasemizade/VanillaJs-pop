@@ -35,6 +35,6 @@ button{
     transition: .2s;
 }
 button:hover{
-    background-color: #888;
+    background-color: #39a6e6b0;
     color: #eee;
 }

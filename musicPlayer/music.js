@@ -2,6 +2,8 @@ let getPlayPauseBtn = document.getElementById('play-pause')
 let getAudio = document.querySelector('audio')
 let getNextBtn = document.getElementById('next')
 let getpreviousBtn = document.getElementById('previous')
+let getSkipBtn = document.getElementById('skip')
+let getBackBtn = document.getElementById('back')
 let flag = true
 
 let musicArraySrc = [
@@ -42,4 +44,12 @@ getNextBtn.addEventListener('click', function () {
     }
     getAudio.setAttribute('src', musicArraySrc[audioIndex])
     getAudio.play()
+})
+
+getBackBtn.addEventListener('click', function () {
+    getAudio.currentTime -= 5;
+})
+
+getSkipBtn.addEventListener('click', function () {
+    getAudio.currentTime += 5;
 })

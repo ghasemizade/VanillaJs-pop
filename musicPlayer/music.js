@@ -15,7 +15,12 @@ let musicArraySrc = [
 let audioIndex = 0
 
 getpreviousBtn.addEventListener('click', function () {
-    audioIndex--;
+    audioIndex -= 1;
+    if (audioIndex < 0) {
+        audioIndex = 4
+    }
+    getAudio.setAttribute('src', musicArraySrc[audioIndex])
+    getAudio.play()
 })
 
 getPlayPauseBtn.addEventListener('click', function () {
@@ -37,5 +42,4 @@ getNextBtn.addEventListener('click', function () {
     }
     getAudio.setAttribute('src', musicArraySrc[audioIndex])
     getAudio.play()
-    console.log(musicArraySrc[audioIndex])
 })

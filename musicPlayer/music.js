@@ -1,3 +1,4 @@
+// get elemnt from dom
 let getPlayPauseBtn = document.getElementById('play-pause')
 let getAudio = document.querySelector('audio')
 let getNextBtn = document.getElementById('next')
@@ -6,6 +7,7 @@ let getSkipBtn = document.getElementById('skip')
 let getBackBtn = document.getElementById('back')
 let flag = true
 
+// set array for track src
 let musicArraySrc = [
     './media/LightMusic01.mp3',
     './media/LightMusic02.mp3',

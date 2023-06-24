@@ -49,6 +49,7 @@ getNextBtn.addEventListener('click', function () {
     getAudio.play()
 })
 
+// add function for -5second & +5second 
 getBackBtn.addEventListener('click', function () {
     getAudio.currentTime -= 5;
 })

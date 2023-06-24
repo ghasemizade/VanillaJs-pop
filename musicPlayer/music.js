@@ -16,6 +16,7 @@ let musicArraySrc = [
 
 let audioIndex = 0
 
+// add event to previous button for previous track
 getpreviousBtn.addEventListener('click', function () {
     audioIndex -= 1;
     if (audioIndex < 0) {
@@ -37,6 +38,7 @@ getPlayPauseBtn.addEventListener('click', function () {
     }
 })
 
+// add event to next button for next track
 getNextBtn.addEventListener('click', function () {
     audioIndex += 1;
     if (audioIndex > musicArraySrc.length - 1) {

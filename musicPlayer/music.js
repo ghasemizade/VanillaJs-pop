@@ -26,6 +26,7 @@ getpreviousBtn.addEventListener('click', function () {
     getAudio.play()
 })
 
+// add event to play and pause button for play and stop track
 getPlayPauseBtn.addEventListener('click', function () {
     if (flag) {
         getPlayPauseBtn.innerHTML = '<ion-icon name="pause-outline"></ion-icon>'

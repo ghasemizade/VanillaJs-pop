@@ -4,16 +4,33 @@
     padding: 0;
 }
 body{
-    background-image: linear-gradient(to bottom, #000000d7, #0000008c), url('./bg.jpg');
+    background-image: linear-gradient(to bottom, #ffffff6e, #5c5c5c8c), url('./img-poster/Ali-Zand-Vakili-Zibatarin-Roya.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #eee;
+    backdrop-filter: blur(10px);
+    background-size: cover;
+    flex-direction: column;
+    font-family: Dana;
 }
 .container{
-    background-color: #888888bd;
+    background-color: #8f8f8fbd;
     border-radius: 5rem;
+    height: 500px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+}
+.poster{
+    position: absolute;
+    margin-bottom: 22rem;
+}
+.poster img{
+    width: 250px;
+    border-radius: 2rem;
 }
 .music-box{
     margin: 2rem 5rem;
@@ -54,4 +71,8 @@ button:hover{
 
     width: 40px;
     height: 40px;
+}
+.details{
+    text-align: center;
+    /* margin-top: 20rem; */
 }

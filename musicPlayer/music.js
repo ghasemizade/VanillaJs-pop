@@ -9,11 +9,11 @@ let flag = true
 
 // set array for track src
 let musicArraySrc = [
-    './media/LightMusic01.mp3',
-    './media/LightMusic02.mp3',
-    './media/LightMusic03.mp3',
-    './media/LightMusic04.mp3',
-    './media/LightMusic05.mp3',
+    './media/music01.mp3',
+    './media/music02.mp3',
+    // './media/LightMusic03.mp3',
+    // './media/LightMusic04.mp3',
+    // './media/LightMusic05.mp3',
 ]
 
 let audioIndex = 0

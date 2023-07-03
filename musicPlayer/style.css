@@ -62,17 +62,31 @@ button:hover{
 }
 #skip{
     margin: 0.5rem .5rem;
-
     width: 40px;
     height: 40px;
 }
 #back{
     margin: .5rem .5rem;
-
     width: 40px;
     height: 40px;
 }
 .details{
     text-align: center;
     /* margin-top: 20rem; */
+}
+.progress-container {
+    background-color: #fff;
+    border: 5px;
+    cursor: pointer;
+    margin-top: 2rem;
+    height: 4px;
+    width: 95%;
+    border-radius: 10rem;
+}
+.progress {
+    background-color: #39a6e6b0;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transform: width 0.1s linear;
 }

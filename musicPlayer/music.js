@@ -7,6 +7,8 @@ let getpreviousBtn = document.getElementById('previous')
 let getSkipBtn = document.getElementById('skip')
 let getBackBtn = document.getElementById('back')
 let getBgImg = document.getElementById('bg-poster')
+let progress = document.getElementById("progress");
+let getProgress = document.getElementById('progress-container')
 let flag = true
 
 let musicImgArray = [
@@ -70,6 +72,14 @@ getNextBtn.addEventListener('click', function () {
     getAudio.play()
     getPlayPauseBtn.innerHTML = '<ion-icon name="pause-outline"></ion-icon>'
 })
+
+// add progress
+progressContainer.addEventListener("click", function (e) {
+    const width = this.clientWidth;
+    const clickX = e.offsetX;
+    const duration = music.duration;
+    music.currentTime = (clickX / width) * duration;
+});
 
 // add function for -5second & +5second 
 getBackBtn.addEventListener('click', function () {

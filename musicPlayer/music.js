@@ -11,16 +11,35 @@ let progress = document.getElementById("progress");
 let getProgress = document.getElementById('progress-container')
 let flag = true
 
-let musicImgArray = [
-    './img-poster/Ali-Zand-Vakili-Zibatarin-Roya.jpg',
-    './img-poster/Reza-Bahram-Divaneh.jpg',
-]
+// let musicImgArray = [
+//     './img-poster/Ali-Zand-Vakili-Zibatarin-Roya.jpg',
+//     './img-poster/Reza-Bahram-Divaneh.jpg',
+// ]
+
+
+const songs = [
+    {
+      path:
+      "./media/music01.mp3",
+      displayName: "zibatarin roya",
+      artist: "Ali Zandevakili",
+      cover:
+        "./img-poster/Ali-Zand-Vakili-Zibatarin-Roya.jpg",
+    },
+    {
+      path: "./media/music02.mp3",
+      displayName: "Divaneh",
+      artist: "Reza Bahram",
+      cover: "./img-poster/Reza-Bahram-Divaneh.jpg",
+    },
+  ];
+
 
 // set array for track src
-let musicArraySrc = [
-    './media/music01.mp3',
-    './media/music02.mp3',
-]
+// let musicArraySrc = [
+//     './media/music01.mp3',
+//     './media/music02.mp3',
+// ]
 
 let audioIndex = 0
 let imgIndex = 0

@@ -12,5 +12,12 @@ getSwitchElem.addEventListener('click', function(){
     }else{
         localStorage.setItem('theme', 'light')
     }
-
 })
+
+window.onload = function () {
+    let localStorageTheme = localStorage.getItem('theme')
+
+    if (localStorageTheme === 'dark') {
+        document.body.classList.add('dark')
+    }
+}

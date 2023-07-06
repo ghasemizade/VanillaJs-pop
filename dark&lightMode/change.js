@@ -1,0 +1,1 @@
+let getSwitchElem = document.querySelector('.switch')

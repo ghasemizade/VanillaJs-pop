@@ -54,6 +54,7 @@ header {
 }
 
 .flicker {
+  cursor: pointer;
   width: 30px;
   height: 30px;
   border-radius: 15px;
@@ -133,6 +134,10 @@ header {
 #dates {
   background-image: url("./images/dates-app.png");
   background-size: cover;
+}
+
+.sub-title{
+  margin-bottom: 1.2rem;
 }
 
 .sub-section {
@@ -243,6 +248,9 @@ header {
   background-color: rgb(188, 200, 221);
 }
 
+.dark footer {
+  background-color: rgb(28, 28, 28);
+}
 
 @media only screen and (min-width: 970px) {
   .main-text {

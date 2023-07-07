@@ -4,6 +4,8 @@ const getClearBtn = document.getElementById('clear')
 const getCompleteBtn = document.getElementById('complete')
 const getDeleteBtn = document.getElementById('delete')
 const getTasksContent = document.querySelector('.tasks-content')
+const getTask = document.getElementById('task')
+const getDesc = document.querySelector('.desc')
 
 function addToList() {
     // add new div element to dom
@@ -36,10 +38,18 @@ function clearTodoList() {
     getTasksContent.remove()
 }
 function completeTask() {
-    
+    getTask.style.backgroundColor = 'rgb(68, 179, 58)'
+    getTask.style.border = 'none'
+    getDesc.remove()
+    getDeleteBtn.remove()
+    getCompleteBtn.style.fontSize = '18px'
 }
 function deleteTask() {
-    
+    getTask.style.backgroundColor = 'tomato'
+    getTask.style.border = 'none'
+    getDesc.remove()
+    getDeleteBtn.style.fontSize = '18px'
+    getCompleteBtn.remove()
 }
 
 

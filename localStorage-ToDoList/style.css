@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.todoList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 500;
+    color: #333;
+}
+.input-todo{
+    margin-top: 2rem;
+    width: 800px;
+}
+.input-todo input{
+    width: 100%;
+    margin-top: .5rem;
+}

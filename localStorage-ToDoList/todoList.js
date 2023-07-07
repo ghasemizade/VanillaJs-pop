@@ -1,0 +1,1 @@
+const getInput = document.getElementById('input-task')

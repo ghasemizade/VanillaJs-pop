@@ -17,6 +17,9 @@ h1{
     font-weight: 500;
     color: #333;
 }
+h4{
+    color: #666;
+}
 .input-todo{
     margin-top: 2rem;
     width: 800px;
@@ -27,6 +30,14 @@ h1{
     padding: .5rem 0;
     border: 2px solid #bbb;
     border-radius: .3rem;
+    outline: none;
+    transition: .2s;
+}
+.input-todo input:focus{
+    padding: 1rem;
+    font-size: 24px;
+    color: #333;
+    border: 2px solid rgba(75, 112, 231, 0.616);
 }
 .btns{
     margin: 1rem 0;

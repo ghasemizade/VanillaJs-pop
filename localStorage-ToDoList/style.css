@@ -28,3 +28,19 @@ h1{
     border: 2px solid #bbb;
     border-radius: .3rem;
 }
+.btns{
+    margin: 1rem 0;
+}
+.btns button{
+    padding: .4rem .7rem;
+    border: none;
+    color: #eee;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+#add{
+    background-color: rgb(49, 88, 219);
+}
+#clear{
+    background-color: tomato;
+}

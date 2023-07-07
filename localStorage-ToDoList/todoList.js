@@ -20,10 +20,10 @@ function addToList() {
     let completeBtn = document.createElement('button')
     let deleteBtn = document.createElement('button')
     completeBtn.id = 'complete'
-    completeBtn.innerHTML = 'complete'
+    completeBtn.innerHTML = 'Complete'
     completeBtn.style.marginRight = '5px'
     deleteBtn.id = 'delete'
-    deleteBtn.innerHTML = 'delete'
+    deleteBtn.innerHTML = 'Delete'
 
     getTasksContent.append(newDiv)
     newDiv.append(newP)
@@ -33,7 +33,7 @@ function addToList() {
     getInput.value = ''
 }
 function clearTodoList() {
-    
+    getTasksContent.remove()
 }
 function completeTask() {
     
@@ -47,3 +47,10 @@ getAddBtn.addEventListener('click', addToList)
 getClearBtn.addEventListener('click', clearTodoList)
 getCompleteBtn.addEventListener('click', completeTask)
 getDeleteBtn.addEventListener('click', deleteTask)
+
+
+getInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        addToList()
+    }
+})

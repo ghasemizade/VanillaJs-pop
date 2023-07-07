@@ -63,3 +63,9 @@ h1{
     border-radius: .3rem;
     cursor: pointer;
 }
+#complete{
+    background-color: rgb(68, 179, 58);
+}
+#delete{
+    background-color: tomato;
+}

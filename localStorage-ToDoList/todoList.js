@@ -17,7 +17,8 @@ function addToList() {
     }
 
     todosArray.push(newTodoObj)
-    console.log(todosArray)
+    setLocalStorage(todosArray)
+    console.log(todosArray.complete)
     // add new div element to dom
     let newDiv = document.createElement('div')
     newDiv.className = 'task'
@@ -61,7 +62,9 @@ function deleteTask() {
     getDeleteBtn.style.fontSize = '18px'
     getCompleteBtn.remove()
 }
-
+function setLocalStorage(todoList) {
+    localStorage.setItem('todos', JSON.stringify(todoList))
+}
 
 getAddBtn.addEventListener('click', addToList)
 getClearBtn.addEventListener('click', clearTodoList)

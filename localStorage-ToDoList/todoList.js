@@ -7,7 +7,17 @@ const getTasksContent = document.querySelector('.tasks-content')
 const getTask = document.getElementById('task')
 const getDesc = document.querySelector('.desc')
 
+let todosArray = []
+
 function addToList() {
+    let newTodoObj = {
+        id: todosArray.length + 1,
+        title: getInput.value,
+        complete: false,
+    }
+
+    todosArray.push(newTodoObj)
+    console.log(todosArray)
     // add new div element to dom
     let newDiv = document.createElement('div')
     newDiv.className = 'task'

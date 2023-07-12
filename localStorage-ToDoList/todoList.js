@@ -18,7 +18,6 @@ function addToList() {
 
     todosArray.push(newTodoObj)
     setLocalStorage(todosArray)
-    console.log(todosArray.complete)
     // add new div element to dom
     let newDiv = document.createElement('div')
     newDiv.className = 'task'
@@ -71,7 +70,12 @@ getClearBtn.addEventListener('click', clearTodoList)
 getCompleteBtn.addEventListener('click', completeTask)
 getDeleteBtn.addEventListener('click', deleteTask)
 
+function getLocalStorage() {
+    let localStorageTodos = JSON.parse(localStorage.getItem('todos'))
+    console.log(localStorageTodos)
+}
 
+Window.addEventListener('load', getLocalStorage)
 getInput.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
         addToList()

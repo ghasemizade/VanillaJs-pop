@@ -51,7 +51,7 @@ function todosGenerator (todosList) {
         newTodoDeleteBtn.innerHTML = 'Delete'
 
         newTodoLiElem.append(newTodoLabalElem, newTodoCompleteBtn, newTodoDeleteBtn)
-
+        newTodoLiElem.style.display = 'flex'
         todoListElem.append(newTodoLiElem)
     })
 }

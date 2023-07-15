@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>todoList</title>
-</head>
-<body>
-    <div class="todoList">
-        <div class="container">
-            <h1>TodoList App</h1>
-            <div class="input-todo">
-                <h4>Add Item</h4>
-                <input id="input-task" type="text">
-            </div>
-            <div class="btns">
-                <button id="add">Add To List</button>
-                <button id="clear">Clear Todo List</button>
-            </div>
-            <h2>Todo List</h2>
-            <div class="tasks-content">
-                <div id="task" class="task">
-                    <p id="desc" class="desc">Learn Js</p>
-                    <div class="task-btns">
-                        <button class="complete" id="complete">Complete</button>
-                        <button class="delete" id="delete">Delete</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>todolist localstorage</title>
+
+    <!-- Bootstrap -->
+    <link href="./style/bootstrap.min.css" rel="stylesheet" />
+    <link href="./style/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center">Todo List App</h2>
+
+      <div class="form-group">
+        <label for="itemInput">Add Item</label>
+        <input type="text" class="form-control" name="" id="itemInput" />
+      </div>
+      <button id="addButton" class="btn btn-primary">Add To List</button>
+      <button id="clearButton" class="btn btn-danger">Clear Todo List</button>
+      <h3>Todo List</h3>
+      <ul id="todoList">
+      </ul>
     </div>
-    <script src="./todoList.js"></script>
-</body>
+
+    <script type="text/javascript" src="./todoList.js"></script>
+  </body>
 </html>

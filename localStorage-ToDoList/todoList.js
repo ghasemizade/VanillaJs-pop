@@ -72,7 +72,6 @@ function getLocalStorage () {
 function clearTodos () {
     todosArray = []
     todosGenerator(todosArray)
-    // localStorage.clear()
     localStorage.removeItem('todos')
 }
 

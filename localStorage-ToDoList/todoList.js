@@ -45,11 +45,17 @@ function todosGenerator (todosList) {
         newTodoCompleteBtn = $.createElement('button')
         newTodoCompleteBtn.className =  'btn btn-success'
         newTodoCompleteBtn.innerHTML = 'Complete'
-        
+        newTodoCompleteBtn.setAttribute('onclick', 'comTodo(' + todo.id + ')')
+
         newTodoDeleteBtn = $.createElement('button')
         newTodoDeleteBtn.className = 'btn btn-danger'
         newTodoDeleteBtn.innerHTML = 'Delete'
         newTodoDeleteBtn.setAttribute('onclick', 'removeTodo(' + todo.id + ')')
+
+        if (todo.complete) {
+            newTodoLiElem.className = 'uncompleted well'
+            newTodoCompleteBtn.innerHTML = 'UnComplete'
+        }
 
         newTodoLiElem.append(newTodoLabalElem, newTodoCompleteBtn, newTodoDeleteBtn)
         newTodoLiElem.style.display = 'flex'
@@ -66,6 +72,20 @@ function getLocalStorage () {
         todosArray = []
     }
 
+    todosGenerator(todosArray)
+}
+
+function comTodo(todoId) {
+    let localStorageTodos = JSON.parse(localStorage.getItem('todo'))
+    
+    todosArray = localStorageTodos
+    
+    todosArray.forEach(function (todo) {
+        if (todo.id === todoId) {
+            todo.complete = !todo.complete
+        }
+    })
+    setLocalStorage(todosArray)
     todosGenerator(todosArray)
 }
 
@@ -88,7 +108,6 @@ function clearTodos () {
     todosGenerator(todosArray)
     localStorage.removeItem('todos')
 }
-
 
 window.addEventListener('load', getLocalStorage)
 addButton.addEventListener('click', addNewTodo)

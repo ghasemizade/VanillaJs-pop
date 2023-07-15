@@ -49,6 +49,7 @@ function todosGenerator (todosList) {
         newTodoDeleteBtn = $.createElement('button')
         newTodoDeleteBtn.className = 'btn btn-danger'
         newTodoDeleteBtn.innerHTML = 'Delete'
+        newTodoDeleteBtn.setAttribute('onclick', 'removeTodo(' + todo.id + ')')
 
         newTodoLiElem.append(newTodoLabalElem, newTodoCompleteBtn, newTodoDeleteBtn)
         newTodoLiElem.style.display = 'flex'
@@ -66,7 +67,20 @@ function getLocalStorage () {
     }
 
     todosGenerator(todosArray)
+}
 
+function removeTodo(todoId) {
+    let localStorageTodos = JSON.parse(localStorage.getItem('todos'))
+    let reTodo = localStorageTodos.findIndex(function (todo) {
+        return todo.id === todoId
+    })
+
+    todosArray = localStorageTodos
+
+    todosArray.splice(reTodo, 1)
+
+    setLocalStorage(todosArray)
+    todosGenerator(todosArray)
 }
 
 function clearTodos () {

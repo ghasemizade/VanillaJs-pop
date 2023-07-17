@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-image: url(../media/1.jpg);
+    background-size: cover;
+}
+button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.356);
+    backdrop-filter: blur(1px);
+    cursor: pointer;
+    transition: .2s;
+}
+button:hover{
+    background-color: rgba(109, 109, 109, 0.178);
+
+}
+.right-arrow{
+    width: 60px;
+    height: 60px;
+}
+.left-arrow{
+    width: 60px;
+    height: 60px;
+}

@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>BMI</title>
 </head>
 <body>
-    
+    <div class="container ">
+        <div class="content bg-green-100 py-10 px-20">
+            <div class="weight flex justify-between p-5 items-center">
+                <input type="range" class="mr-40 w-60">
+                <p class="kg">100 kg</p>
+            </div>
+            <div class="height flex justify-between p-5 items-center">
+                <input type="range" class="mr-40 w-60">
+                <p class="cm">175 cm</p>
+            </div>
+            <div class="ibm flex justify-center items-center mt-10 flex-col">
+                <h1 class="title text-5xl font-bold text-red-500">IBM</h1>
+                <h3 class="desc text-2xl">30.0</h3>
+            </div>
+        </div>
+    </div>
+    <script src="./bmi.js"></script>
 </body>
 </html>

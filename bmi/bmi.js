@@ -4,9 +4,9 @@ const getRangeKg = document.getElementById('kg-range')
 const getRangeCm = document.getElementById('cm-range')
 const getRes = document.getElementById('desc')
 
-getRangeKg.addEventListener('change', bmiCal)
+getRangeKg.addEventListener('input', bmiCal)
 
-getRangeCm.addEventListener('change', bmiCal)
+getRangeCm.addEventListener('input', bmiCal)
 
 function bmiCal() {
     var newRangeKg = getRangeKg.value

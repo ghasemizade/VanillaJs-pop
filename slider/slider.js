@@ -11,10 +11,17 @@ let imgArray = [
     '/media/5.jpg',
     '/media/6.jpg',
 ]
-
+let n = 0
 
 function prevBtnFun() {
-    
+    index--
+    index = imgArray.length - (1+n)
+    container.style.backgroundImage = 'url('+ imgArray[index] + ')'
+    console.log(index)
+    n++
+    if (n === 6) {
+        n = 0
+    }
 }
 
 function nextBtnFun() {

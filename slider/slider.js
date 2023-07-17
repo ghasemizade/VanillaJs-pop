@@ -27,9 +27,10 @@ function prevBtnFun() {
 function nextBtnFun() {
     index++
     container.style.backgroundImage = 'url('+ imgArray[index] + ')'
+    if (index >= 5) {
+        index = 0
+    }
 }
-
-// console.log(imgArray[index])
 
 nextBtn.addEventListener('click', nextBtnFun)
 prevBtn.addEventListener('click', prevBtnFun)

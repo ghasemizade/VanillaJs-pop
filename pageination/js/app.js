@@ -45,4 +45,8 @@ function displayProducts(allProductArray, productContainer, rowsCount, currentPa
     });
 }
 
+function setUpPageination(allProductArray, pageinationContainer, rowsCount) {
+    
+}
+
 displayProducts(listItems, productListContainer, rowsCount, currentPage)

@@ -9,3 +9,19 @@ const dummyText = [
   'Gingerbread bonbon pudding biscuit sugar plum. Donut caramels cake danish lollipop. Chocolate bar jelly dessert candy canes. Sweet sesame snaps cookie. Croissant bear claw chocolate powder jelly beans ice cream. Bear claw brownie icing apple pie. Ice cream marshmallow tiramisu cotton candy brownie tiramisu jujubes. Croissant cheesecake tiramisu wafer powder pie macaroon.',
   'Powder cake croissant tootsie roll tart lollipop jelly beans. Cake lemon drops wafer muffin biscuit marshmallow brownie. Cotton candy jelly-o cotton candy gummies. Cake sesame snaps macaroon tootsie roll. Pie wafer topping tootsie roll apple pie marzipan sweet. Bonbon tootsie roll candy canes pastry brownie bear claw.',
 ];
+
+const getInputAmount = document.querySelector('#amount')
+const getBtn = document.querySelector('button')
+const getRes = document.querySelector('#result')
+
+getBtn.addEventListener('click', function (e) {
+  e.preventDefault()
+
+  let amountElemValue = getInputAmount.value
+  let randomTextIndex = Math.floor(Math.random() * dummyText.length)
+
+  if (amountElemValue < 0 || amountElemValue > 9 || amountElemValue === '' || isNaN(amountElemValue)) {
+    getRes.innerHTML = dummyText[randomTextIndex]
+  }
+  console.log('click')
+})

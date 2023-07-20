@@ -50,12 +50,21 @@ function setUpPageination(allProductArray, pageinationContainer, rowsCount) {
     let pageCount = Math.ceil(allProductArray.length / rowsCount)
 
     for (let i = 1; i < pageCount; i++) {
-        
+        let btn = pageinationBtn(i, allProductArray)
+        pageinationContainer.appendChild(btn)
     }
 }
 
-function pageinationBtn(currentPage, items) {
-    
+function pageinationBtn(currentPageBtn, items) {
+    let button = document.createElement('button')
+    button.innerHTML = currentPageBtn
+
+    if (currentPageBtn === currentPage) {
+        button.classList.add('active')
+    }
+
+    return button
 }
 
 displayProducts(listItems, productListContainer, rowsCount, currentPage)
+setUpPageination(listItems, pageinationContainer, rowsCount)

@@ -28,7 +28,7 @@ let productListContainer = document.querySelector('#list')
 let pageinationContainer = document.querySelector('#pagination')
 
 let currentPage = 1
-let rows = 5
+let rowsCount = 5
 
 function displayProducts(allProductArray, productContainer, rowsCount, currentPage) {
     productContainer.innerHTML = ''
@@ -40,3 +40,5 @@ function displayProducts(allProductArray, productContainer, rowsCount, currentPa
 
     console.log(pageinatedProduct)
 }
+
+displayProducts(listItems, productListContainer, rowsCount, currentPage)

@@ -8,6 +8,7 @@ const getSecond = document.getElementById('seconds')
 setInterval(function () {
     let Time = new Date()
     
+
     getHour.innerHTML = Time.getHours()
     getMinute.innerHTML = Time.getMinutes()
     getSecond.innerHTML = Time.getSeconds()

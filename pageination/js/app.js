@@ -30,6 +30,13 @@ let pageinationContainer = document.querySelector('#pagination')
 let currentPage = 1
 let rows = 5
 
-function displayProducts(params) {
-    
+function displayProducts(allProductArray, productContainer, rowsCount, currentPage) {
+    productContainer.innerHTML = ''
+
+    let endIndex = rowsCount * currentPage
+    let startIndex = endIndex - rowsCount
+
+    let pageinatedProduct = allProductArray.slice(startIndex, endIndex)
+
+    console.log(pageinatedProduct)
 }

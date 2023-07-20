@@ -3,14 +3,17 @@ const getMinute = document.getElementById('minute')
 const getSecond = document.getElementById('seconds')
 
 
-const Time = new Date()
 
-getHour.innerHTML = Time.getHours()
-getMinute.innerHTML = Time.getMinutes()
 
 setInterval(function () {
+    let Time = new Date()
+    
+    getHour.innerHTML = Time.getHours()
+    getMinute.innerHTML = Time.getMinutes()
     getSecond.innerHTML = Time.getSeconds()
 }, 1000)
+
+
 
 
 

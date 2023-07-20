@@ -55,13 +55,22 @@ function setUpPageination(allProductArray, pageinationContainer, rowsCount) {
     }
 }
 
-function pageinationBtn(currentPageBtn, items) {
+function pageinationBtn(currentPageBtn, allProductArray) {
     let button = document.createElement('button')
     button.innerHTML = currentPageBtn
 
     if (currentPageBtn === currentPage) {
         button.classList.add('active')
     }
+
+    button.addEventListener('click', function () {
+        currentPage = currentPageBtn
+        displayProducts(allProductArray, productListContainer, rowsCount, currentPage)
+
+        let prevPage = document.querySelector('button.active')
+        prevPage.classList.remove('active')
+        button.classList.add('active')
+    })
 
     return button
 }

@@ -46,7 +46,8 @@ function displayProducts(allProductArray, productContainer, rowsCount, currentPa
 }
 
 function setUpPageination(allProductArray, pageinationContainer, rowsCount) {
-    
+    pageinationContainer.innerHTML = ''
+    let pageCount = Math.ceil(allProductArray.length / rowsCount)
 }
 
 displayProducts(listItems, productListContainer, rowsCount, currentPage)

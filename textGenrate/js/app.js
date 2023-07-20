@@ -28,6 +28,8 @@ getBtn.addEventListener('click', function (e) {
     let finalText = sliceArray.map(function (item) {
       return '<p>' + item + '</p>'
     }).join('')
+
+    getRes.innerHTML = finalText
   }
   console.log('click')
 })

@@ -22,6 +22,12 @@ getBtn.addEventListener('click', function (e) {
 
   if (amountElemValue < 0 || amountElemValue > 9 || amountElemValue === '' || isNaN(amountElemValue)) {
     getRes.innerHTML = dummyText[randomTextIndex]
+  }else{
+    let sliceArray = dummyText.slice(0, amountElemValue)
+    getRes.innerHTML = sliceArray
+    let finalText = sliceArray.map(function (item) {
+      return '<p>' + item + '</p>'
+    }).join('')
   }
   console.log('click')
 })

@@ -53,3 +53,9 @@ function addProductToBasket (productId){
     })
     userBasket.push(mainProduct)
 }
+
+function basketProductGenrator(userBasketArray) {
+    userBasketArray.forEach(product => {
+        
+    })
+}

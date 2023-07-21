@@ -47,6 +47,13 @@ ul > li:hover{
     grid-template-columns: auto auto auto;
     gap: 7rem;
 }
+img{
+    border-radius: 0.25rem;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.price{
+    color: gray;
+}
 .details{
     margin-top: 1rem;
     display: flex;
@@ -59,6 +66,12 @@ ul > li:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #eee;
     margin-top: 7rem;
+}
+.social li{
+    padding: 1rem;
+    color: #eee;
+}
+.social li:hover{
+    color: #eee;
 }

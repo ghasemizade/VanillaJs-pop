@@ -89,3 +89,32 @@ button:hover{
 .social li:hover{
     color: #eee;
 }
+.cart{
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    width: 70%;
+}
+table th{
+    text-align: start;
+    border-bottom: 1px solid gray;
+    margin-right: 2rem;
+}
+td > input{
+    width: 50px;
+}
+td > button{
+    color: tomato;
+}
+td > button:hover{
+    background-color: rgba(255, 99, 71, 0.445);
+}
+h2{
+    text-align: center;
+    margin-bottom: .5rem;
+    color: gray;
+}

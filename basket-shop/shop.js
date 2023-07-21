@@ -17,4 +17,7 @@ let allProducts = [
 allProducts.forEach(product => {
     let productContainer = document.createElement('div')
     productContainer.classList.add('p-items')
+
+    let productTitle = document.createElement('h2')
+    productTitle.classList.add('title')
 });

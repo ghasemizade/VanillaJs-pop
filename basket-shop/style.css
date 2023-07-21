@@ -54,6 +54,20 @@ img{
 .price{
     color: gray;
 }
+button{
+    border: none;
+    text-transform: capitalize;
+    color: rgb(69, 158, 69);
+    font-weight: bold;
+    padding: .5rem;
+    transition: .2s;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgba(69, 158, 69, 0.507);
+    color: #eee;
+}
 .details{
     margin-top: 1rem;
     display: flex;

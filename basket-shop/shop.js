@@ -21,4 +21,22 @@ allProducts.forEach(product => {
     let productTitle = document.createElement('h2')
     productTitle.classList.add('title')
     productTitle.innerHTML = product.title
+
+    let productImage = document.createElement('img')
+    productImage.setAttribute('src', product.img)
+
+    let productDetails = document.createElement('div')
+    productDetails.classList.add('details')
+
+    let pElemPrice = document.createElement('p')
+    pElemPrice.innerText = product.price
+    pElemPrice.classList.add('price')
+
+    let addBtn = document.createElement('button')
+    addBtn.innerHTML = 'add to cart'
+    addBtn.classList.add('add-btn')
+
+    productDetails.append(pElemPrice, addBtn)
+    productContainer.append(productTitle, productImage, productDetails)
+    
 });

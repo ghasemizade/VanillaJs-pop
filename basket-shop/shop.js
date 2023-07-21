@@ -58,6 +58,8 @@ function addProductToBasket (productId){
 }
 
 function basketProductGenrator(userBasketArray) {
+    basketProductsContainer.innerHTML = ''
+
     userBasketArray.forEach(product => {
         
         let basketProductContainer = document.createElement('div')

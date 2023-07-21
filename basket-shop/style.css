@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
 }
-body{
+.header{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,5 +43,18 @@ ul > li:hover{
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 7rem;
+}
+.details{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
+.footer{
+    background-color: gray;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

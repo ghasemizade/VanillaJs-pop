@@ -42,7 +42,7 @@ ul > li:hover{
     justify-content: center;
     align-items: center;
 }
-.products-card{
+.products-cart{
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 7rem;

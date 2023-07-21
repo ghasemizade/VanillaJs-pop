@@ -13,6 +13,7 @@ let allProducts = [
     {id: 6, title: 'potatos', price: 3.14, img: './image/potatoes.jpeg'},
 ]
 
+const shopItemsContainer = document.querySelector('.products-cart')
 
 allProducts.forEach(product => {
     let productContainer = document.createElement('div')
@@ -39,4 +40,5 @@ allProducts.forEach(product => {
     productDetails.append(pElemPrice, addBtn)
     productContainer.append(productTitle, productImage, productDetails)
     
+    shopItemsContainer.append(productContainer)
 });

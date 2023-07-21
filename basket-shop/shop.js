@@ -15,6 +15,8 @@ let allProducts = [
 
 userBasket = []
 const shopItemsContainer = document.querySelector('.products-cart')
+const basketProductsContainer = document.querySelector('.cart-items')
+
 
 allProducts.forEach(product => {
     let productContainer = document.createElement('div')
@@ -90,8 +92,8 @@ function basketProductGenrator(userBasketArray) {
         basketProductRemoveBtn.className = 'btn btn-danger'
         basketProductRemoveBtn.innerHTML = 'Remove'
 
+        basketProductInputContainer.append(basketProductInput, basketProductRemoveBtn)
         basketProductContainer.append(basketProductDetaileContainer, basketProductPriceSpan, basketProductInputContainer)
-
-        console.log(basketProductContainer)
+        basketProductsContainer.append(basketProductContainer)
     })
 }

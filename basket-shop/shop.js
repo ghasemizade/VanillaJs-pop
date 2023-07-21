@@ -20,4 +20,5 @@ allProducts.forEach(product => {
 
     let productTitle = document.createElement('h2')
     productTitle.classList.add('title')
+    productTitle.innerHTML = product.title
 });

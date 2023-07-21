@@ -168,3 +168,14 @@ h2{
     align-items: center;
     margin-right: 2.5rem;
 }
+.cart-quantity > input {
+    width: 50px;
+    margin-right: .5rem;
+}
+.cart-quantity > button{
+    color: tomato;
+}
+.cart-quantity > button:hover{
+    color: #eee;
+    background-color: rgb(255, 99, 71);
+}

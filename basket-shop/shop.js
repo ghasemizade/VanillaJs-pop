@@ -13,6 +13,7 @@ let allProducts = [
     {id: 6, title: 'potatos', price: 3.14, img: './image/potatoes.jpeg'},
 ]
 
+userBasket = []
 const shopItemsContainer = document.querySelector('.products-cart')
 
 allProducts.forEach(product => {
@@ -36,9 +37,19 @@ allProducts.forEach(product => {
     let addBtn = document.createElement('button')
     addBtn.innerHTML = 'add to cart'
     addBtn.classList.add('add-btn')
+    addBtn.addEventListener('click', function () {
+        addProductToBasket(product.id)
+    })
 
     productDetails.append(pElemPrice, addBtn)
     productContainer.append(productTitle, productImage, productDetails)
     
     shopItemsContainer.append(productContainer)
 });
+
+function addProductToBasket (productId){
+    let mainProduct = allProducts.find(function (product) {
+        return product.id === productId
+    })
+    userBasket.push(mainProduct)
+}

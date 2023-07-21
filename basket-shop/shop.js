@@ -30,7 +30,7 @@ allProducts.forEach(product => {
     productDetails.classList.add('details')
 
     let pElemPrice = document.createElement('p')
-    pElemPrice.innerText = product.price
+    pElemPrice.innerText = '$ ' + product.price
     pElemPrice.classList.add('price')
 
     let addBtn = document.createElement('button')

@@ -91,6 +91,9 @@ function basketProductGenrator(userBasketArray) {
         basketProductInput.className = 'cart-quantity-input'
         basketProductInput.value = product.count
         basketProductInput.setAttribute('type', 'number')
+        basketProductInput.addEventListener('change', function () {
+            updateCount(product.id, basketProductInput.value)
+        })
 
         let basketProductRemoveBtn = document.createElement('button')
         basketProductRemoveBtn.className = 'btn btn-danger'
@@ -122,4 +125,11 @@ function calcTotalPrice(userBasketArray) {
     cartTotalPrice.innerHTML = Math.trunc(totalPrice)
 }
 
-function updateCount (productId, newCount){}
+function updateCount (productId, newCount){
+    userBasket.forEach(product => {
+        if (product.id === productId) {
+            product.count = newCount
+        }
+    });
+    calcTotalPrice(userBasket)
+}

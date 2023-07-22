@@ -93,9 +93,20 @@ function basketProductGenrator(userBasketArray) {
         let basketProductRemoveBtn = document.createElement('button')
         basketProductRemoveBtn.className = 'btn btn-danger'
         basketProductRemoveBtn.innerHTML = 'Remove'
+        basketProductRemoveBtn.addEventListener('click', function () {
+            removeProductFromBasket(product.id)
+        })
 
         basketProductInputContainer.append(basketProductInput, basketProductRemoveBtn)
         basketProductContainer.append(basketProductDetaileContainer, basketProductPriceSpan, basketProductInputContainer)
         basketProductsContainer.append(basketProductContainer)
     })
+}
+
+function removeProductFromBasket(productId) {
+    userBasket = userBasket.filter(function (product) {
+        return product.id !== productId
+    })
+    basketProductGenrator(userBasket)
+    console.log(newUserBasket)
 }

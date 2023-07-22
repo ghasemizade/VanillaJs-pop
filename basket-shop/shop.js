@@ -5,17 +5,18 @@ const getItems = document.querySelectorAll('.p-items')
 
 
 let allProducts = [
-    {id: 1, title: 'bananas', price: 2.65, img: './image/bananas.jpeg'},
-    {id: 2, title: 'beef', price: 4.56, img: './image/beef.jpeg'},
-    {id: 3, title: 'broccoli', price: 1.26, img: './image/broccoli.jpeg'},
-    {id: 4, title: 'milk', price: 0.89, img: './image/milk.jpeg'},
-    {id: 5, title: 'peppers', price: 0.56, img: './image/peppers.jpeg'},
-    {id: 6, title: 'potatos', price: 3.14, img: './image/potatoes.jpeg'},
+    {id: 1, title: 'bananas', price: 2.65, img: './image/bananas.jpeg', count: 1},
+    {id: 2, title: 'beef', price: 4.56, img: './image/beef.jpeg', count: 1},
+    {id: 3, title: 'broccoli', price: 1.26, img: './image/broccoli.jpeg', count: 1},
+    {id: 4, title: 'milk', price: 0.89, img: './image/milk.jpeg', count: 1},
+    {id: 5, title: 'peppers', price: 0.56, img: './image/peppers.jpeg', count: 1},
+    {id: 6, title: 'potatos', price: 3.14, img: './image/potatoes.jpeg', count: 1},
 ]
 
 userBasket = []
 const shopItemsContainer = document.querySelector('.products-cart')
 const basketProductsContainer = document.querySelector('.cart-items')
+const cartTotalPrice = document.querySelector('.cart-total-price')
 
 
 allProducts.forEach(product => {
@@ -55,6 +56,7 @@ function addProductToBasket (productId){
     })
     userBasket.push(mainProduct)
     basketProductGenrator(userBasket)
+    calcTotalPrice(userBasket)
 }
 
 function basketProductGenrator(userBasketArray) {
@@ -87,7 +89,7 @@ function basketProductGenrator(userBasketArray) {
 
         let basketProductInput = document.createElement('input')
         basketProductInput.className = 'cart-quantity-input'
-        basketProductInput.value = '1'
+        basketProductInput.value = product.count
         basketProductInput.setAttribute('type', 'number')
 
         let basketProductRemoveBtn = document.createElement('button')
@@ -110,3 +112,14 @@ function removeProductFromBasket(productId) {
     basketProductGenrator(userBasket)
     console.log(newUserBasket)
 }
+
+function calcTotalPrice(userBasketArray) {
+    let totalPrice = 0
+
+    userBasketArray.forEach(product => {
+        totalPrice += product.count * product.price
+    })
+    cartTotalPrice.innerHTML = Math.trunc(totalPrice)
+}
+
+function updateCount (productId, newCount){}

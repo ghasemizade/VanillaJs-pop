@@ -1,4 +1,4 @@
-let customScroll = document.querySelector('.scroll')
+let customScroll = document.querySelector('#scroll')
 
 
 window.addEventListener('scroll', function () {
@@ -8,9 +8,9 @@ window.addEventListener('scroll', function () {
     let windowHeight = window.innerHeight
 
 
-    let scrollPercentage = Math.round((scrollTop / (documentHeight - windowHeight)) * 100)
+    let scrollPercentage = Math.round((scrollTop / (documentHeight - windowHeight) - 0.029) * 100)
 
-    customScroll.style
+    customScroll.style.width = scrollPercentage + '%'
 
     console.log(scrollTop)
     console.log(documentHeight)

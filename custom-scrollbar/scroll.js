@@ -8,7 +8,7 @@ window.addEventListener('scroll', function () {
     let windowHeight = window.innerHeight
 
 
-    let scrollPercentage = Math.round((scrollTop / (documentHeight - windowHeight) - 0.029) * 100)
+    let scrollPercentage = Math.round((scrollTop / (documentHeight - windowHeight)) * 100)
 
     customScroll.style.width = scrollPercentage + '%'
 

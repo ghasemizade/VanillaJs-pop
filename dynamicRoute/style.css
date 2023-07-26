@@ -3,6 +3,9 @@
     padding: 0;
     margin: 0;
 }
+body{
+    font-family: sans-serif;
+}
 .container{
     height: 100vh;
     background: rgb(63,94,251);
@@ -34,11 +37,35 @@
     width: 270px;
     border-radius: .5rem;
     border-bottom-left-radius: 10rem;
-    border-bottom-right-radius: 10rem;
+    border-bottom-right-radius: 7rem;
     transition: 0.2s;
     cursor: pointer;
     filter: grayscale(1);
 }
 .item .details > img:hover{
     filter:grayscale(0);
+}
+h3{
+    color: #fff;
+    margin-top: 1rem;
+
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    color: white;
+    margin-top: 1rem;
+}
+.price-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+.price-flex > p{
+    margin: 0 1.5rem;
 }

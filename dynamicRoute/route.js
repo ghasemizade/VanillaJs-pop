@@ -1,4 +1,4 @@
-let productContainer = document.querySelector('.container')
+let productContainer = document.querySelector('.grid-items')
 
 let productArray = [
     {id: 1, title: 'Air Jordan 1 Mid SE', price: 124.95, img: './imgs/air-jordan-1.jpg'},
@@ -7,6 +7,6 @@ let productArray = [
 ]
 
 productArray.forEach(function (product) {
-    productContainer.insertAdjacentElement('beforeend', '<div class="item"><div class="details"><img src="'+ productArray.img +'" alt="jordan-1"><h3>' + productArray.title + '</h3><p class="desc">Mens Shoes</p><p class="price">£' + productArray.price + '</p><a href="">SEE MORE</a></div></div>')
+    productContainer.insertAdjacentHTML('afterbegin', '<div class="item"><div class="details"><img src="'+ product.img +'" alt="jordan-1"><h3>' + product.title + '</h3><p class="desc">Mens Shoes</p><p class="price">£' + product.price + '</p><a href="product.html?id=' + product.id + '">SEE MORE</a></div></div>')
     
 })

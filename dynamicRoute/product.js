@@ -27,4 +27,3 @@ if (mainProductObject) {
 } else {
     location.href = 'http://127.0.0.1:5500/dynamicRoute/index.html'
 }
-console.log(mainProductObject)

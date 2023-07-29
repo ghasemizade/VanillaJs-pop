@@ -10,3 +10,10 @@ productArray.forEach(function (product) {
     productContainer.insertAdjacentHTML('afterbegin', '<div class="item"><div class="details"><img src="'+ product.img +'" alt="jordan-1"><h3>' + product.title + '</h3><p class="desc">Mens Shoes</p><p class="price">£' + product.price + '</p><a href="product.html?id=' + product.id + '">SEE MORE</a></div></div>')
     
 })
+
+window.addEventListener('online', function () {
+    console.log('online');
+})
+window.addEventListener('offline', function () {
+    console.log('offline');
+})

@@ -69,3 +69,13 @@ p{
 .price-flex > p{
     margin: 0 1.5rem;
 }
+@media screen and (max-width: 1000px) {
+    .item{
+        font-size: 12px;
+        width: 200px;
+        height: 430px;
+    }
+    .item .details > img{
+        width: 200px;
+    }
+}

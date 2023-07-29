@@ -79,3 +79,15 @@ p{
         width: 200px;
     }
 }
+a{
+    text-decoration: none;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    padding: 10px;
+    color: #fff;
+    transition: .2s;
+}
+a:hover{
+    color: rgb(252, 70, 237);
+}

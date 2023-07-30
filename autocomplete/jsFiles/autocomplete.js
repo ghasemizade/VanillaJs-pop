@@ -29,5 +29,16 @@ function suggestionWordGenerator(wordsArray) {
     } else {
         emptyHandler = listitemArray.join('')
     }
-    console.log(emptyHandler);
+    autoCompleteBox.innerHTML = emptyHandler
+    select()
+}
+
+function  select() {
+    let allListItems = autoCompleteBox.querySelectorAll('li')
+    allListItems.forEach(function (wordItem) {
+        wordItem.addEventListener('click', function (event) {
+            getInputElem.value = event.target.textContent
+            autoCompleteWrapper.classList.remove('active')
+        })
+    })
 }

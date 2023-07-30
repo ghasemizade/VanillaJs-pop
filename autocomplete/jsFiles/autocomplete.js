@@ -9,7 +9,7 @@ getInputElem.addEventListener('keyup', function () {
     if (searchValue) {
         autoCompleteWrapper.classList.add('active')
         let filteredWord = suggestions.filter(function (word) {
-            return word.toLowerCase().includes(searchValue.toLowerCase())
+            return word.toLowerCase().startsWith(searchValue.toLowerCase())
         })
         suggestionWordGenerator(filteredWord)
     } else {

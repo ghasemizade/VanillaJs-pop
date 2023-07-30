@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>autoComplete</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>autocomplete</title>
-</head>
-<body>
-    <div class="container">
-        <div class="search-box">
-            <input type="text" placeholder="Type to search...">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="search-icon">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-            </svg>
-            <div class="autocom-box">
-                <!-- fill this segment -->
-            </div>   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="Type to search...">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
         </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
     </div>
+
+    <script src="./jsFiles/data.js"></script>
     <script src="./jsFiles/autocomplete.js"></script>
-</body>
+
+  </body>
 </html>

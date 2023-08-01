@@ -6,7 +6,9 @@ let getDelBtn = document.getElementById('del')
 let getNotes = document.getElementById('notes')
 
 getNotes.addEventListener('click', function (event) {
-    event.target.parentElement.remove()
+    if (event.target.tagName === 'SPAN') {
+        event.target.parentElement.remove()
+    }
 })
 
 getInput.addEventListener('keyup', function (event) {

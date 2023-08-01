@@ -5,13 +5,16 @@ let getAddBtn = document.getElementById('add')
 let getDelBtn = document.getElementById('del')
 let getNotes = document.getElementById('notes')
 
+getNotes.addEventListener('click', function (event) {
+    event.target.parentElement.remove()
+})
+
 getInput.addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
         let createDivElem = document.createElement('div')
         let createSpanElem = document.createElement('span')
         createDivElem.className = 'note'
-        createDivElem.style.backgroundColor = getInput.style.backgroundColor 
-        console.log(getInput.style.backgroundColor)
+        createDivElem.style.backgroundColor = getInput.style.backgroundColor
         createSpanElem.className = 'title'
         getNotes.appendChild(createDivElem)
         createDivElem.appendChild(createSpanElem)
@@ -27,8 +30,8 @@ getItemColor.forEach(function(index){
             case '1':
                 getInput.style.backgroundColor = 'var(--white)'
                 break;
-            case '2':
-                getInput.style.backgroundColor = 'var(--golden)'
+                case '2':
+                    getInput.style.backgroundColor = 'var(--golden)'
                 break;
             case '3':
                 getInput.style.backgroundColor = 'var(--yellow)'
@@ -42,21 +45,21 @@ getItemColor.forEach(function(index){
             case '6':
                 getInput.style.backgroundColor = 'var(--darkcyan)'
                 break;
-            case '7':
-                getInput.style.backgroundColor = 'var(--cyan)'
-                break;
-            case '8':
-                getInput.style.backgroundColor = 'var(--blue)'
-                break;
-            case '9':
+                case '7':
+                    getInput.style.backgroundColor = 'var(--cyan)'
+                    break;
+                    case '8':
+                        getInput.style.backgroundColor = 'var(--blue)'
+                        break;
+                        case '9':
                 getInput.style.backgroundColor = 'var(--darkpurple)'
                 break;
             case '10':
                 getInput.style.backgroundColor = 'var(--purple)'
                 break;
-            case '11':
-                getInput.style.backgroundColor = 'var(--pink)'
-                break;            
+                case '11':
+                    getInput.style.backgroundColor = 'var(--pink)'
+                    break;            
             default:
                 break;
         }

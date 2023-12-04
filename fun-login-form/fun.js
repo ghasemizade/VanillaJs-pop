@@ -41,14 +41,28 @@ const userInputBlur = () => {
         rightEyeLeft++
     }, 10)
 }
-const userKeyHandler = () => {
-    console.log("keypress");
-}
+// !!!!!!!!!!!!!!!!   update !!!!!!!!!!!!!!!!
+// const userKeyHandler = (event) => {
+    
+//     if (leftEyeLeft > 155) {
+//         return false
+//     }
+//     console.log(event.keyCode);
+
+//     if (sevent.keyCode === 8) {
+//         leftEyeLeft -= 1
+//         rightEyeLeft -= 1
+//     }else {
+//         leftEyeLeft++
+//         rightEyeLeft++
+//     }
+//     leftEye.style.left = leftEyeLeft + 'px'
+//     rightEye.style.left = rightEyeLeft + 'px'
+
+//     leftEyeLeft++
+//     rightEyeLeft++
+// }
 const passInputFocus = () => {
-    // rightEyeTop = 69
-    // rightEyeLeft = 208
-    // leftEyeTop = 69
-    // leftEyeLeft = 158
 
     let eyePosition = setInterval(() => {
         if (leftEyeTop && rightEyeTop === 68) {
@@ -84,6 +98,6 @@ const passInputBlur = () => {
 
 userInputElem.addEventListener('focus', userInputFocus)
 userInputElem.addEventListener('blur', userInputBlur)
-userInputElem.addEventListener('keypress', userKeyHandler)
+// userInputElem.addEventListener('keydown', userKeyHandler)
 passInputElem.addEventListener('focus', passInputFocus)
 passInputElem.addEventListener('blur', passInputBlur)

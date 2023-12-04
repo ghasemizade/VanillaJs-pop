@@ -1,12 +1,89 @@
-const userInputElem = document.getElementById("username")
-const passInputElem = document.getElementById("password")
-const leftEye = document.querySelector(".righteye")
-const rightEye = document.querySelector(".lefteye")
+const userInputElem = document.querySelector("#username-input")
+const passInputElem = document.querySelector("#password-input")
+const leftEye = document.querySelector(".lefteye")
+const rightEye = document.querySelector(".righteye")
 
-inputElem.addEventListener('focus', () => {
-    console.log("focus");
-})
+let leftEyeTop = 78
+let leftEyeLeft = 145
+let rightEyeTop = 78
+let rightEyeLeft = 220
 
-inputElem.addEventListener('blur', () => {
-    console.log("blur");
-})
+const userInputFocus = () => {
+    let eyePosition = setInterval(() => {
+        if (leftEyeTop === 87) {
+            clearInterval(eyePosition)
+        }
+        leftEye.style.top = leftEyeTop + 'px'
+        leftEye.style.left = leftEyeLeft + 'px'
+        rightEye.style.top = rightEyeTop + 'px'
+        rightEye.style.left = rightEyeLeft + 'px'
+
+        leftEyeTop++
+        leftEyeLeft--
+        rightEyeTop++
+        rightEyeLeft--
+        
+    }, 10)
+}
+const userInputBlur = () => {
+    let eyePosition = setInterval(() => {
+        if (leftEyeTop === 78) {
+            clearInterval(eyePosition)
+        }
+        leftEye.style.top = leftEyeTop + 'px'
+        leftEye.style.left = leftEyeLeft + 'px'
+        rightEye.style.top = rightEyeTop + 'px'
+        rightEye.style.left = rightEyeLeft + 'px'
+
+        leftEyeTop--
+        leftEyeLeft++
+        rightEyeTop--
+        rightEyeLeft++
+    }, 10)
+}
+const userKeyHandler = () => {
+    console.log("keypress");
+}
+const passInputFocus = () => {
+    // rightEyeTop = 69
+    // rightEyeLeft = 208
+    // leftEyeTop = 69
+    // leftEyeLeft = 158
+
+    let eyePosition = setInterval(() => {
+        if (leftEyeTop && rightEyeTop === 68) {
+            clearInterval(eyePosition)
+        }
+        leftEye.style.top = leftEyeTop + 'px'
+        leftEye.style.left = leftEyeLeft + 'px'
+        rightEye.style.top = rightEyeTop + 'px'
+        rightEye.style.left = rightEyeLeft + 'px'
+
+        rightEyeTop--
+        leftEyeTop--
+        rightEyeLeft++
+        leftEyeLeft++
+    }, 10)
+}
+const passInputBlur = () => {
+    let eyePosition = setInterval(() => {
+        if (leftEyeTop && rightEyeTop === 78) {
+            clearInterval(eyePosition)
+        }
+        leftEye.style.top = leftEyeTop + 'px'
+        leftEye.style.left = leftEyeLeft + 'px'
+        rightEye.style.top = rightEyeTop + 'px'
+        rightEye.style.left = rightEyeLeft + 'px'
+
+        rightEyeTop++
+        leftEyeTop++
+        rightEyeLeft--
+        leftEyeLeft--
+    }, 15)
+}
+
+userInputElem.addEventListener('focus', userInputFocus)
+userInputElem.addEventListener('blur', userInputBlur)
+userInputElem.addEventListener('keypress', userKeyHandler)
+passInputElem.addEventListener('focus', passInputFocus)
+passInputElem.addEventListener('blur', passInputBlur)

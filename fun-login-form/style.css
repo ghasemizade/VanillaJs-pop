@@ -7,6 +7,7 @@ body {
 	background-color:white;
 	background-position:fixed;
 	line-height:25px;
+    user-select: none;
 }
 .container{
     background-color:#fbf468;

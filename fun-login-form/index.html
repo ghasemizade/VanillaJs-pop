@@ -7,13 +7,13 @@
     <title>Js Form Login</title>
 </head>
 <body>
-    <form class="container">
-        <img src="./assets/bobno.png" class="bob"> </img>
-        <img src="./assets/eye.png" class="lefteye" id="lefteye"> </img>
-        <img src="./assets/eye.png" class="righteye" id="righteye"> </img>
+    <form class="container" >
+        <img src="./assets/bobno.png" class="bob" draggable="false"> </img>
+        <img src="./assets/eye.png" class="lefteye" id="lefteye" draggable="false"> </img>
+        <img src="./assets/eye.png" class="righteye" id="righteye" draggable="false"> </img>
         <div class="login-form">
-            <input id="username" class="input-form" type="text" placeholder="username">
-            <input id="password" class="input-form" type="password" placeholder="password">
+            <input autocomplete="" id="username-input" class="input-form" type="text" placeholder="username">
+            <input autocomplete="" id="password-input" class="input-form" type="password" placeholder="password">
             <button type="submit" class="btn-entry">LOGIN</button>
         </div>
     </form>

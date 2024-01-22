@@ -1,57 +1,100 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 .container{
-    border: 2px solid black;
+    background-color: #ffffff;
+    width: 400px;
+    padding: 50px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
     border-radius: 10px;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.25);
 }
-.color-palette{
-    border: none;
-    border-radius: 50px;
-    width: 40px;
-    height: 40px;
+.container *:not(i){
+    font-family: "Rubik",sans-serif;
 }
-.left-color-palette{
+.colors{
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
-
+    justify-content: space-around;
 }
-.right-color-palette{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
-
-}
-.palette{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
-}
-.palette-svg{
-    transition: all 0.5s ease-out;
-
-}
-.palette-svg:hover{
-    transform: rotate(180deg);
-}
-.select-box{
-    width: 30px;
-    height: 30px;
-    border: 2px solid gray;
-    border-radius: 5px;
-    margin: 0 10px;
-    margin-top: 20px;
-}
-.select-direction{
-    display: flex;
-}
-.select-box{
+input[type="color"]{
+    background-color: transparent;
+    width: 100px;
+    height: 45px;
     cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch{
+    border-radius: 20px;
+    border: none;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+.buttons button{
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    border: 2px solid #d5d5dc;
+    color: #d5d5dc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.rotate-icon i{
+    transform: rotate(45deg);
+}
+.buttons .active{
+    border: none;
+    background-color: #4a6ee0;
+    color: #ffffff;
+}
+#submit{
+    display: block;
+    background-color: #4a6ee0;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 12px 70px;
+    border-radius: 25px;
+    margin: 0 auto 30px auto;
+    cursor: pointer;
+}
+.output{
+    background-color: #f0f2fc;
+}
+#code{
+    width: 100%;
+    resize: none;
+    color: #30304a;
+    padding: 10px 20px;
+    background-color: transparent;
+}
+#copy{
+    font-size: 14px;
+    border: solid 1px #4a6ee0;
+    color: #4a6ee0;
+    position: relative;
+    left: 85%;
+    bottom: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+#copy:hover{
+    color: #ffffff;
+    background-color: #4a6ee0;
 }

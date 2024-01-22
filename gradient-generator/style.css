@@ -9,6 +9,7 @@
 }
 body{
     height: 100vh;
+    /* background: linear-gradient(to bottom, #1488cc, #2b32b2); */
 }
 .container{
     background-color: #ffffff;
@@ -74,6 +75,7 @@ input[type="color"]::-webkit-color-swatch{
 }
 .output{
     background-color: #f0f2fc;
+    border-radius: 10px;
 }
 #code{
     width: 100%;

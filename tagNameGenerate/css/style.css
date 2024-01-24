@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #5372f0;
+  background: #b183e6;
 }
 
 ::selection {
@@ -103,10 +103,10 @@ body {
   cursor: pointer;
   padding: 9px 15px;
   border-radius: 5px;
-  background: #5372f0;
+  background: #c353f0;
   transition: background 0.3s ease;
 }
 
 .details button:hover {
-  background: #2c52ed;
+  background: #c62ced;
 }

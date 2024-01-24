@@ -12,10 +12,6 @@ const countTags = () => {
     tagsCountSpanElem.innerHTML = maxTagsCount - tags.length
 }
 
-const removeTag = (tagElem) => {
-    
-}
-
 const removeAllLi = () => {
     tagUlElem.querySelectorAll('li').forEach(tag => tag.remove())
 }
@@ -24,13 +20,21 @@ const createTag = () => {
     let tagLi = null
     removeAllLi();
     [...tags].reverse().forEach(tag => {
-        tagLi = `<li>${tag}<i class="uit uit-multiply"></i></li>`    
+        tagLi = `<li>${tag}<i class="uit uit-multiply" onclick="removeTag(this, '${tag}')"></i></li>`    
         tagUlElem.insertAdjacentHTML('afterbegin', tagLi)
     })
     countTags()
 }
+
 createTag()
 countTags()
+
+const removeTag = (tagElem, tagTitle) => {
+    tagElem.parentElement.remove();
+    let tagIndex = tags.indexOf(tagTitle)
+    tags.splice(tagIndex, 1)
+    countTags()
+}
 
 const addTag = (event) => {
     if (event.key === "Enter") {

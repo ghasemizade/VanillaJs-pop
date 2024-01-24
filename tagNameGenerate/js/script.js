@@ -41,7 +41,7 @@ const addTag = (event) => {
         let tagTitle = event.target.value
 
         if (tags.length < 10) {
-            if (tagTitle.length < 10 && tagTitle.length > 0) {
+            if (tagTitle.length < 10 && tagTitle.length > 0 && !tags.includes(tagTitle)) {
                 tags.push(tagTitle)
                 createTag()
             }

@@ -51,5 +51,17 @@ function updateName(element) {
     selectBtn.firstElementChild.textContent = element.textContent
 }
 
+inputElem.addEventListener('keyup', () => {
+    let searchWord = inputElem.value.toLowerCase()
+
+    let userCountries = countries.filter(country => country
+        .toLowerCase()
+        .startsWith(searchWord))
+        .map(country => `<li onclick="updateName(this)">${country}</li>`)
+        .join('')
+
+    showOptions.innerHTML = userCountries    
+})
+
 selectBtn.addEventListener('click', contentShow)
 window.addEventListener('load', addCountries)

@@ -5,7 +5,7 @@ const tagsCountSpanElem = $.querySelector('span')
 const removeAllBtn = $.querySelector('button')
 
 let maxTagsCount = 10
-let tags = ["React", "Js"]
+let tags = ["react", "js"]
 
 const countTags = () => {
     tagInputElem.focus()
@@ -41,7 +41,7 @@ const addTag = (event) => {
         let tagTitle = event.target.value
 
         if (tags.length < 10) {
-            if (tagTitle.length < 10 && tagTitle.length > 0 && !tags.includes(tagTitle)) {
+            if (tagTitle.length < 10 && tagTitle.length > 0 && !tags.includes(tagTitle.toLowerCase())) {
                 tags.push(tagTitle)
                 createTag()
             }

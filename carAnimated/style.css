@@ -8,7 +8,6 @@ body {
     height: 80vh;
     width: 70vw;
     margin: 5rem auto;
-    border: 1px solid black;
     background: url(images/Img_1.png);
     background-size: cover;
     position: relative;
@@ -82,4 +81,9 @@ body {
 }
 .off{
     background-color: red;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    color: #fff;
 }

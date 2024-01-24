@@ -36,9 +36,18 @@ function addCountries(){
 }
 
 function updateName(element) {
-    console.log(element.textContent);
     inputElem.value = element.textContent
+
     content.style.display = 'none'
+    arrowBtn.classList.remove("active")
+    isShow = false
+    
+    for (let option of showOptions.children){
+        option.innerHTML === element.innerHTML ?
+            option.classList.add('selected') :
+            option.classList.remove('selected')
+    }
+
     selectBtn.firstElementChild.textContent = element.textContent
 }
 

@@ -38,6 +38,8 @@ function addCountries(){
 function updateName(element) {
     console.log(element.textContent);
     inputElem.value = element.textContent
+    content.style.display = 'none'
+    selectBtn.firstElementChild.textContent = element.textContent
 }
 
 selectBtn.addEventListener('click', contentShow)

@@ -60,7 +60,7 @@ inputElem.addEventListener('keyup', () => {
         .map(country => `<li onclick="updateName(this)">${country}</li>`)
         .join('')
 
-    showOptions.innerHTML = userCountries    
+    showOptions.innerHTML = userCountries ? userCountries : `<p style="color: red;">ops! country Not Found</p>`
 })
 
 selectBtn.addEventListener('click', contentShow)

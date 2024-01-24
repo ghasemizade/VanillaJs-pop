@@ -22,10 +22,10 @@ const removeAllLi = () => {
 
 const createTag = () => {
     let tagLi = null
-    removeAllLi()
-    tags.forEach(tag => {
+    removeAllLi();
+    [...tags].reverse().forEach(tag => {
         tagLi = `<li>${tag}<i class="uit uit-multiply"></i></li>`    
-        tagUlElem.insertAdjacentHTML('beforeend', tagLi)
+        tagUlElem.insertAdjacentHTML('afterbegin', tagLi)
     })
     countTags()
 }
@@ -47,3 +47,9 @@ const addTag = (event) => {
 }
 
 tagInputElem.addEventListener('keyup', addTag)
+removeAllBtn.addEventListener('click', () =>{
+    tags.length = 0
+
+    removeAllLi()
+    countTags()
+})

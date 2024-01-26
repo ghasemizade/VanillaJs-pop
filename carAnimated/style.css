@@ -87,3 +87,8 @@ h1{
     justify-content: center;
     color: #fff;
 }
+h2{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
